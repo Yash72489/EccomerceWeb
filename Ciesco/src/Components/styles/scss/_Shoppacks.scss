@@ -1,0 +1,259 @@
+$breakpoint-small: 0;
+$breakpoint-medium: 640px;
+$breakpoint-large: 1024px;
+$breakpoint-xlarge: 1200px;
+$breakpoint-xxlarge: 1440px;
+
+.container-Shoppack {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 150px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    .title-shop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            .spann {
+                border-bottom: 1px solid black;
+            }
+
+            .link {
+                color: black;
+              
+                text-decoration: none;
+                &:after {
+                        content: "";
+                        transition: all 0.3s;
+                
+                      
+                        transform: translateX(-50%, -50%) scale(0);
+                
+                    }
+                
+                    &:hover {
+                    border-bottom: 1px solid black;
+                    transition: all 0.3s;
+                
+                        &::after {
+                            transform: translate(-50%, -50%) scale(1);
+                        }
+                    }
+            }
+
+          
+        }
+
+
+
+        button {
+            background-color: black;
+            color: white;
+            border-radius: 30px;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 300%;
+                height: 300%;
+                background: rgba(255, 255, 255, 0.3);
+                border-radius: 50%;
+                transform: translate(-50%, -50%) scale(0);
+                transition: transform 0.5s ease;
+            }
+
+            &:hover {
+                background-color: rgb(42, 41, 41);
+
+                &::after {
+                    transform: translate(-50%, -50%) scale(1);
+                }
+            }
+        }
+    }
+
+    .grid-Shopcart {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+
+        .carts-bag-item {
+            width: 100%;
+            padding: 20px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: flex-start;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            &:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+
+            .img-cart-shop {
+                max-width: 100%;
+                border-radius: 20px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    border-radius: 20px;
+                    transition: transform 0.3s ease;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+            h3 {
+                font-size: 20px;
+                font-weight: 800;
+                margin: 10px 0;
+            }
+
+            .btn-Cart-shop {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                align-items: center;
+                justify-content: center;
+
+                p {
+                    border: 1px solid rgb(26, 212, 26);
+                    background-color: white;
+                    padding: 5px 8px;
+                    border-radius: 10px;
+                    align-self: center;
+                    margin-top: 14px;
+                    font-size: 14px;
+                    color: rgb(26, 212, 26);
+                }
+
+                button {
+                    background-color: #fff;
+                    border: 1px solid rgb(164, 164, 164);
+                    border-radius: 15px;
+                    padding: 5px 10px;
+                    transition: all 0.3s;
+                    cursor: pointer;
+                    position: relative;
+                    overflow: hidden;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 300%;
+                        height: 300%;
+                        background: rgba(0, 0, 0, 0.1);
+                        border-radius: 50%;
+                        transform: translate(-50%, -50%) scale(0);
+                        transition: transform 0.5s ease;
+                    }
+
+                    &:hover {
+                        background-color: #e2e2e2;
+                        border: 1px solid rgb(164, 164, 164);
+
+                        &::after {
+                            transform: translate(-50%, -50%) scale(1);
+                        }
+                    }
+
+                    &:active {
+                        background-color: #e2e2e2;
+                        border: 1px solid rgb(142, 141, 141);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Responsive adjustments
+@media (max-width: $breakpoint-large) {
+    .container-Shoppack {
+        margin-top: 100px;
+        padding: 20px;
+
+        .title-shop {
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+
+            button {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        .grid-Shopcart {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-medium) {
+    .container-Shoppack {
+        margin-top: 80px;
+        padding: 15px;
+
+        .grid-Shopcart {
+            grid-template-columns: 1fr;
+            gap: 15px;
+
+            .carts-bag-item {
+                padding: 15px;
+
+                h3 {
+                    font-size: 18px;
+                }
+
+                .btn-Cart-shop {
+                    gap: 10px;
+
+                    p {
+                        font-size: 12px;
+                    }
+
+                    button {
+                        padding: 4px 8px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-small) {
+    .container-Shoppack {
+        margin-top: 60px;
+        padding: 10px;
+
+        .grid-Shopcart {
+            grid-template-columns: 1fr;
+        }
+    }
+}

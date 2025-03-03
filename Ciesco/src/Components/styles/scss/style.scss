@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&display=swap');
+
+@import "../scss/navbar";
+@import "../scss/carausel";
+@import "../scss/offer";
+@import "../scss/Steps";
+@import "../scss/ciescoRefer";
+@import "../scss/BagPackCart";
+@import "../scss/Shoppacks";
+@import "../scss/Footer";
+@import "../scss/advertise";
+@import "../scss/blogcreation";
+@import "../scss/aboutpage";
+@import "../scss/contactpage";
+@import "../scss/news";
+@import "../scss/item1";
+@import "../scss/addtoCart";
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mulish", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+}
+
+.ciesco-container {
+    width: 100%;
+    border: 1px solid black;
+}
+
+
+.ciesco-logo {
+    margin-left: 30px;
+}

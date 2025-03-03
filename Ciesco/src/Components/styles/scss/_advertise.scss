@@ -1,0 +1,212 @@
+$breakpoint-small: 0;
+$breakpoint-medium: 640px;
+$breakpoint-large: 1024px;
+$breakpoint-xlarge: 1200px;
+$breakpoint-xxlarge: 1440px;
+
+.container-advertise {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 150px;
+    padding: 20px;
+
+    .container-field {
+        padding: 30px;
+
+        .color-container {
+            display: flex;
+            flex-direction: row;
+            background-color: rgb(244, 244, 223);
+            padding: 40px;
+            gap: 180px;
+            height: 600px;
+            border-radius: 50px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+            .img-content {
+                position: relative;
+                left: -20px;
+                max-width: 300px;
+
+                img {
+                    width: 130%;
+                }
+            }
+
+            .content-products {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                width: 350px;
+                margin-top: 50px;
+                justify-content: flex-start;
+
+                img {
+                    width: 40%;
+                }
+
+                h2 {
+                    font-size: 48px;
+                    font-weight: 700;
+                }
+
+                p {
+                    color: rgb(81, 81, 81);
+                }
+
+                .btn-Discover {
+                    button {
+                        background-color: black;
+                        color: #fff;
+                        border-radius: 20px;
+                        padding: 10px 25px;
+                        border: none;
+                        font-weight: 800;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-xlarge) {
+    .container-advertise {
+        margin-top: 100px;
+        padding: 15px;
+
+        .container-field {
+            padding: 20px;
+
+            .color-container {
+                gap: 120px;
+                height: 500px;
+                padding: 30px;
+
+                .img-content {
+                    left: -15px;
+                    max-width: 250px;
+
+                    img {
+                        width: 120%;
+                    }
+                }
+
+                .content-products {
+                    width: 300px;
+                    margin-top: 40px;
+
+                    h2 {
+                        font-size: 40px;
+                    }
+
+                    .btn-Discover {
+                        button {
+                            padding: 8px 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-large) {
+    .container-advertise {
+        margin-top: 80px;
+        padding: 10px;
+
+        .container-field {
+            padding: 15px;
+
+            .color-container {
+                flex-direction: column;
+                gap: 60px;
+                height: auto;
+                padding: 20px;
+
+                .img-content {
+                    left: 0;
+                    max-width: 100%;
+                    text-align: center;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .content-products {
+                    width: 100%;
+                    margin-top: 20px;
+                    align-items: center;
+                    text-align: center;
+
+                    h2 {
+                        font-size: 36px;
+                    }
+
+                    .btn-Discover {
+                        button {
+                            padding: 10px 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-medium) {
+    .container-advertise {
+        margin-top: 60px;
+        padding: 5px;
+
+        .container-field {
+            padding: 10px;
+
+            .color-container {
+                gap: 40px;
+                padding: 15px;
+
+                .content-products {
+                    h2 {
+                        font-size: 32px;
+                    }
+
+                    .btn-Discover {
+                        button {
+                            padding: 8px 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-small) {
+    .container-advertise {
+        margin-top: 40px;
+        padding: 0;
+
+        .container-field {
+            padding: 5px;
+
+            .color-container {
+                gap: 20px;
+                padding: 10px;
+
+                .content-products {
+                    h2 {
+                        font-size: 28px;
+                    }
+
+                    .btn-Discover {
+                        button {
+                            padding: 6px 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

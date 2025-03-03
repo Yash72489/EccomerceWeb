@@ -1,0 +1,202 @@
+.Offer-Section {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .title-discover {
+        span {
+            opacity: 0.7;
+        }
+    }
+
+    .cards-offers {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        justify-content: center;
+
+        .card-structure {
+            padding: 20px;
+            border-radius: 20px;
+            width: 450px;
+            background-color: #f3f4e9;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            justify-content: center;
+
+            .card-filled {
+                width: 200px;
+                display: flex;
+                flex-direction: column;
+                gap: 90px;
+
+                h1 {
+                    font-size: 24px;
+                }
+
+                button {
+                    background-color: #fff;
+                    border-radius: 30px;
+                    padding: 10px 20px;
+                    border: 0.1px solid rgb(192, 192, 192);
+                    transition: all 0.3s;
+
+                    &:hover {
+                        border: 0.1px solid rgb(161, 161, 161);
+                        background-color: #e3e3e3;
+                    }
+                }
+            }
+
+            .card-img {
+                width: 220px;
+                height: 220px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1440px) {
+        max-width: 1100px;
+    }
+
+    @media (max-width: 1200px) {
+        max-width: 1000px;
+        margin-top: 120px;
+        gap: 30px;
+
+        .cards-offers {
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+
+            .card-structure {
+                width: 100%;
+                padding: 15px;
+
+                .card-filled {
+                    gap: 60px;
+
+                    h1 {
+                        font-size: 20px;
+                    }
+
+                    button {
+                        padding: 8px 16px;
+                    }
+                }
+
+                .card-img {
+                    width: 180px;
+                    height: 180px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        max-width: 900px;
+        margin-top: 100px;
+        gap: 25px;
+
+        .cards-offers {
+            gap: 10px;
+
+            .card-structure {
+                padding: 10px;
+
+                .card-filled {
+                    gap: 50px;
+
+                    h1 {
+                        font-size: 18px;
+                    }
+
+                    button {
+                        padding: 6px 12px;
+                    }
+                }
+
+                .card-img {
+                    width: 160px;
+                    height: 160px;
+                   img {
+                            width: 81%;
+                        }
+                }
+            }
+        }
+               
+    }
+
+    @media (max-width: 640px) {
+        max-width: 100%;
+        margin-top: 80px;
+        gap: 20px;
+        .Offer-Section .cards-offers .card-structure .card-img img {
+                width: 80%;
+            }
+
+        .cards-offers {
+            grid-template-columns: 1fr;
+            gap: 10px;
+
+            .card-structure {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+
+                .card-filled {
+                    width: 100%;
+                    gap: 30px;
+                    text-align: center;
+
+                    h1 {
+                        font-size: 16px;
+                    }
+
+                    button {
+                        padding: 5px 10px;
+                    }
+                }
+
+                .card-img {
+                    width: 140px;
+                    height: 140px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        margin-top: 50px;
+        gap: 15px;
+
+        .cards-offers {
+            .card-structure {
+                .card-filled {
+                    gap: 20px;
+
+                    h1 {
+                        font-size: 14px;
+                    }
+
+                    button {
+                        padding: 4px 8px;
+                    }
+                }
+
+                .card-img {
+                    width: 120px;
+                    height: 120px;
+                }
+            }
+        }
+    }
+}

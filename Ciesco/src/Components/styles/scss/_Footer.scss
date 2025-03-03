@@ -1,0 +1,240 @@
+$breakpoint-small: 0;
+$breakpoint-medium: 640px;
+$breakpoint-large: 1024px;
+$breakpoint-xlarge: 1200px;
+$breakpoint-xxlarge: 1440px;
+
+.container-footer {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 150px;
+    padding: 20px;
+
+    .footer-content {
+        display: flex;
+            flex-direction: row;
+            gap: 49px;
+        
+
+        @media (max-width: $breakpoint-large) {
+                gap: 31px;
+                
+        }
+
+        @media (max-width: $breakpoint-medium) {
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .footer-list {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+
+            @media (max-width: $breakpoint-large) {
+            display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            @media (max-width: $breakpoint-medium) {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .footer-hole {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                h2 {
+                    font-size: 18px;
+                    font-weight: 700;
+                    margin-bottom: 15px;
+                }
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    li {
+                        list-style-type: none;
+
+                        .link {
+                            color: rgb(110, 110, 110);
+                            text-decoration: none;
+                            transition: all 0.3s;
+
+                            &:hover {
+                                color: rgb(47, 47, 47);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .form-footer {
+            .form-content {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                position: relative;
+
+                h3 {
+                    font-size: 20px;
+                    font-weight: 700;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid rgb(238, 238, 238);
+                }
+
+                p {
+                    width: 350px;
+                    color: rgb(99, 99, 99);
+
+                    @media (max-width: $breakpoint-medium) {
+                        width: 100%;
+                    }
+                }
+
+                input {
+                    padding: 7px 10px;
+                    width: 350px;
+                    border-radius: 15px;
+                    border: 1px solid rgb(220, 220, 220);
+
+                    @media (max-width: $breakpoint-medium) {
+                        width: 100%;
+                    }
+                }
+                .footer-btn{
+                    position: absolute;
+                    top: 142px;
+                    right: 15px;
+                    button{
+                        border-radius: 150%;
+                        background-color: black;
+                        color: white;
+                        
+                    }
+                    
+                }
+            }
+        }
+    }
+
+    .footer-icon {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 50px;
+
+        @media (max-width: $breakpoint-medium) {
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            text-align: center;
+        }
+
+        .ciseco-foot {
+            p {
+                color: rgb(99, 99, 99);
+            }
+        }
+
+        .icon-social {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+
+            .facebook {
+                color: blue;
+                font-size: 24px;
+            }
+
+            .tiktok {
+                color: rgb(69, 2, 2);
+                font-size: 24px;
+            }
+
+            .twitter {
+                color: rgb(0, 0, 0);
+                font-size: 24px;
+            }
+
+            .youtube {
+                color: rgb(255, 0, 0);
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-small) {
+    .container-footer {
+        margin-top: 100px;
+        padding: 15px;
+
+        .footer-content {
+            gap: 30px;
+
+            .footer-list {
+                gap: 10px;
+
+                .footer-hole {
+                    h2 {
+                        font-size: 16px;
+                    }
+
+                    ul {
+                        gap: 8px;
+
+                        li {
+                            .link {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .form-footer {
+                .form-content {
+                    h3 {
+                        font-size: 18px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+
+                    input {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .footer-icon {
+            margin-top: 30px;
+
+            .ciseco-foot {
+                p {
+                    font-size: 14px;
+                }
+            }
+
+            .icon-social {
+                gap: 15px;
+
+                .facebook,
+                .tiktok,
+                .twitter,
+                .youtube {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,107 @@
+// src/ItemsPages/Pages/Item1.scss
+.item-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+
+    .item-image-container {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 1.5rem;
+
+        .item-image {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .item-info {
+        text-align: center;
+
+        .item-title {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .item-description {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .item-price {
+            font-size: 1.5rem;
+            color: #007bff;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+
+        .item-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+
+            .add-to-cart-btn,
+            .remove-from-cart-btn {
+                padding: 0.75rem 1.5rem;
+                border: none;
+                border-radius: 5px;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.2s ease;
+
+                &:hover {
+                    transform: translateY(-2px);
+                }
+            }
+
+            .add-to-cart-btn {
+                background-color: #28a745;
+                color: white;
+
+                &:hover {
+                    background-color: #218838;
+                }
+            }
+
+            .remove-from-cart-btn {
+                background-color: #dc3545;
+                color: white;
+
+                &:hover {
+                    background-color: #c82333;
+                }
+            }
+        }
+    }
+}
+
+.item-not-found {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #dc3545;
+    margin-top: 2rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

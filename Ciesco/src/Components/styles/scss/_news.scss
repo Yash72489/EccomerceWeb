@@ -1,32 +1,32 @@
+$breakpoint-small: 0;
+$breakpoint-medium: 640px;
+$breakpoint-large: 1024px;
+$breakpoint-xlarge: 1200px;
+$breakpoint-xxlarge: 1440px;
+
 .container-news {
     max-width: 1200px;
     margin: auto;
     margin-top: 50px;
-  
 
     .title-news {
         display: flex;
         flex-direction: column;
-
         align-items: center;
 
-        p{
+        p {
             .spann {
-              border-bottom: 1px solid black;           
+                border-bottom: 1px solid black;
             }
 
             .link {
                 color: black;
-
                 text-decoration: none;
 
                 &:after {
                     content: "";
                     transition: all 0.3s;
-
-
                     transform: translateX(-50%, -50%) scale(0);
-
                 }
 
                 &:hover {
@@ -76,52 +76,120 @@
     }
 
     .container-cards {
-      
         margin-top: 80px;
         padding: 20px;
-      
 
         .card-Newscontent {
-          
-           
             display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                gap: 50px;
-                flex-direction: row;
-                justify-content: center;
-            
-            .content-cardd{
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 50px;
+
+            .content-cardd {
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
                 width: 350px;
-                .img-content{
-                  width: 100%;
+
+                .img-content {
+                    width: 100%;
+
                     img {
-                            width: 350px;
-                                height: 232px;
-                            border-radius: 20px;
-                        }
+                        width: 350px;
+                        height: 232px;
+                        border-radius: 20px;
+                    }
                 }
-                .date-spring{
+
+                .date-spring {
                     display: flex;
                     flex-direction: row;
                     gap: 20px;
                     align-items: center;
                     font-size: 0.8rem;
-                    .txt-spring{
+
+                    .txt-spring {
                         background-color: rgb(234, 236, 239);
                         border-radius: 20px;
                         padding: 2px 5px;
-                       
                     }
                 }
-                h2{
+
+                h2 {
                     font-weight: 700;
                 }
-                
             }
-           
+        }
+    }
+}
+
+@media (max-width: $breakpoint-large) {
+    .container-news {
+        .container-cards {
+            .card-Newscontent {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-medium) {
+    .container-news {
+        .title-news {
+            button {
+                padding: 8px 16px;
+                font-size: 16px;
+            }
+        }
+
+        .container-cards {
+            .card-Newscontent {
+                grid-template-columns: 1fr;
+
+                .content-cardd {
+                    width: 100%;
+
+                    .img-content {
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-small) {
+    .container-news {
+        margin-top: 30px;
+
+        .title-news {
+            p {
+                font-size: 14px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 14px;
+            }
+        }
+
+        .container-cards {
+            margin-top: 40px;
+            padding: 10px;
+
+            .card-Newscontent {
+                gap: 20px;
+
+                .content-cardd {
+                    gap: 10px;
+
+                    h2 {
+                        font-size: 20px;
+                    }
+                }
+            }
         }
     }
 }

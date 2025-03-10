@@ -1,5 +1,5 @@
-import Index from "./Index"
 
+import Routes from "./Components/shared/routes/Routes";
 
 function App() {
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <>
     <div className="ciesco-container">
-     <Index />
+     <Routes/>
      </div>
    
     </>

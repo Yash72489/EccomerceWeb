@@ -11,7 +11,7 @@ import { AddtoCart } from "../../Navbar/Cart/AddtoCart";
 import AboutPage from "../../page/AboutPage";
 import { News } from "../../Feeds/News";
 import Item1 from "../../ItemsPages/Pages/Item1";
-// import Item2 from "../../ItemsPages/Pages/Item2"; // Import other item components as needed
+
 
 const router = createBrowserRouter([
   {
@@ -86,7 +86,7 @@ const router = createBrowserRouter([
       </ShopPacksProvider>
     ),
   },
-  // Add more routes for other items as needed
+  
 ]);
 
 const Routes = () => {
